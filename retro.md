@@ -17,3 +17,20 @@
 
 ## ❌ Dejar de hacer
 - Subir archivos ZIP en lugar de carpetas estructuradas.
+
+## Retrospectiva Sprint 2
+
+### ⭐ Comenzar a hacer
+- Dividir mejor las tareas del backend en rutas y controladores.
+
+### ➕ Hacer más
+- Uso de CSS consistente entre páginas.
+
+### ➡️ Continuar haciendo
+- Planificación previa con wireframes.
+
+### ➖ Hacer menos
+- Tiempo en tareas sin entregable directo.
+
+### ❌ Dejar de hacer
+- Trabajar sin registrar cambios en Git.
