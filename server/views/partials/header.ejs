@@ -1,0 +1,13 @@
+<header>
+  <h1>EcoMercado 🌿</h1>
+  <nav>
+    <a href="/products">Productos</a> |
+    <% if (session.user) { %>
+      Bienvenido, <%= session.user.firstName %> |
+      <a href="/logout">Salir</a>
+    <% } else { %>
+      <a href="/login">Login</a> |
+      <a href="/register">Registrarse</a>
+    <% } %>
+  </nav>
+</header>

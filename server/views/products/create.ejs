@@ -1,0 +1,22 @@
+<h1>Crear producto</h1>
+
+<% if (typeof error !== 'undefined') { %>
+  <div style="color: red; margin-bottom: 10px;"><%= error %></div>
+<% } %>
+
+<form action="/products" method="POST" enctype="multipart/form-data">
+  <input type="text" name="name" placeholder="Nombre" required><br>
+  <input type="number" name="price" step="0.01" placeholder="Precio" required><br>
+  <input type="number" name="discount" value="0" placeholder="Descuento"><br>
+  <textarea name="description" placeholder="Descripción"></textarea><br>
+  <input type="file" name="image"><br>
+
+  <label>Categoría:</label>
+  <select name="category" required>
+    <% categories.forEach(c => { %>
+      <option value="<%= c.id %>"><%= c.name %></option>
+    <% }) %>
+  </select><br>
+
+  <button type="submit">Guardar</button>
+</form>

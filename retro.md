@@ -34,3 +34,24 @@
 
 ### ❌ Dejar de hacer
 - Trabajar sin registrar cambios en Git.
+
+# Retro Sprint 5 – EcoMercado
+
+## ✅ Lo que funcionó bien
+- Registro de usuarios con imagen y contraseña segura
+- Inicio de sesión funcional
+- Implementación correcta de cookies y sesiones
+- Protección de vistas según estado de login
+- Middleware de "Recordarme"
+
+## 🚧 Lo que se puede mejorar
+- Validación más robusta de datos de entrada
+- Mensajes de error más descriptivos
+- Agregar protección por `authMiddleware` a vistas privadas
+
+## 💡 Aprendizajes clave
+- Uso de `bcryptjs` para seguridad de contraseñas
+- Manejo de archivos con `multer`
+- Implementación de cookies y sesiones en Express
+- Rutas protegidas con middlewares personalizados
+

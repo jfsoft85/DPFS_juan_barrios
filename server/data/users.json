@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "firstName": "Juan",
+    "lastName": "Barrios",
+    "email": "jfsoft85@gmail.com",
+    "password": "$2b$10$RYxP/icQgjGJhrg0ZfcWg.xD85FBih0sc3UgUwjJjdc1VydBNpeyS",
+    "category": "cliente",
+    "image": "1751388872549.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Jose",
+    "lastName": "Barrios",
+    "email": "fausti_85@hotmail.com",
+    "password": "$2b$10$unKOWs.9wTw7yc2aTd1Co.jVdAkVL2XonwDG/cnMcdhbXs9YwH13C",
+    "category": "cliente",
+    "image": "1751388932640.jpeg"
+  }
+]

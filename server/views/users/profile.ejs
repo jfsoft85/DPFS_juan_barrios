@@ -1,0 +1,15 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<h1>¡Hola <%= user.name %>!</h1>
+
+<p><strong>Email:</strong> <%= user.email %></p>
+
+<% if (user.image) { %>
+  <p><strong>Imagen de perfil:</strong></p>
+  <img src="/img/users/<%= user.image %>" width="150" alt="Foto de perfil">
+<% } %>
+
+<p><a href="/logout">Cerrar sesión</a></p>
+
+<%- include('../partials/footer') %>

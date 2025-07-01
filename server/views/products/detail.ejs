@@ -1,0 +1,16 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<h1><%= product.name %></h1>
+
+<img src="/img/products/<%= product.image %>" alt="<%= product.name %>" width="200" />
+
+<p><strong>Descripción:</strong> <%= product.description %></p>
+<p><strong>Precio:</strong> <%= product.price %> Gs</p>
+<p><strong>Descuento:</strong> <%= product.discount %>%</p>
+<p><strong>Categoría:</strong> <%= product.category ? product.category.name : "Sin categoría" %></p>
+
+<br>
+<a href="/products">⬅ Volver al listado</a>
+
+<%- include('../partials/footer') %>

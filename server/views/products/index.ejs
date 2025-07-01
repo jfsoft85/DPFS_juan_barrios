@@ -1,1 +1,24 @@
-<!DOCTYPE html><html><head><title>EcoMercado</title><link rel='stylesheet' href='css/styles.css'></head><body><h1>Bienvenido a EcoMercado</h1><a href='productDetail.html'>Ver producto</a> | <a href='productCart.html'>Carrito</a> | <a href='register.html'>Registrarse</a> | <a href='login.html'>Login</a></body></html>
+<h1>Listado de productos</h1>
+
+<a href="/products/create" style="margin-bottom: 20px; display: inline-block;">+ Crear nuevo producto</a>
+
+<% if (products.length === 0) { %>
+  <p>No hay productos registrados.</p>
+<% } else { %>
+  <ul style="list-style: none; padding-left: 0;">
+    <% products.forEach(p => { %>
+      <li style="margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+        <img src="/img/products/<%= p.image %>" width="100" style="vertical-align: middle; margin-right: 10px;">
+        <strong><%= p.name %></strong> - <%= p.price %> Gs
+        <br>
+        <small><%= p.category?.name || "Sin categoría" %></small>
+        <br><br>
+        <a href="/products/<%= p.id %>">Ver detalle</a> |
+        <a href="/products/<%= p.id %>/edit">Editar</a> |
+        <form action="/products/<%= p.id %>?_method=DELETE" method="POST" style="display:inline;">
+          <button type="submit" onclick="return confirm('¿Estás seguro que querés eliminar este producto?')">Eliminar</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

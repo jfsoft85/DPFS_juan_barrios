@@ -1,1 +1,12 @@
-<!DOCTYPE html><html><head><title>Login</title><link rel='stylesheet' href='css/styles.css'></head><body><h1>Ingresar</h1><form><input type='email' placeholder='Email'><input type='password' placeholder='Contraseña'><button>Ingresar</button></form><a href='index.html'>Volver al inicio</a></body></html>
+<h1>Iniciar sesión</h1>
+
+<% if (typeof error !== 'undefined') { %>
+  <p style="color: red;"><%= error %></p>
+<% } %>
+
+<form action="/login" method="POST">
+  <input type="email" name="email" placeholder="Correo electrónico" required value="<%= old?.email || '' %>" /><br/>
+  <input type="password" name="password" placeholder="Contraseña" required /><br/>
+  <label><input type="checkbox" name="remember" /> Recordarme</label><br/><br/>
+  <button type="submit">Ingresar</button>
+</form>

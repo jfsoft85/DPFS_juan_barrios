@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Botella ecológica",
+    "description": "500ml reutilizable, acero inoxidable.",
+    "image": "botella.jpg",
+    "category": "accesorios",
+    "colors": [
+      "verde",
+      "azul"
+    ],
+    "price": 85000
+  },
+  {
+    "id": 2,
+    "name": "Cepillo de bambú",
+    "description": "Biodegradable, mango de bambú natural.",
+    "image": "cepillo.jpg",
+    "category": "higiene",
+    "colors": [
+      "madera"
+    ],
+    "price": 15000
+  },
+  {
+    "id": 3,
+    "name": "Bolsa compostable",
+    "description": "Paquete x10, apto para residuos orgánicos.",
+    "image": "bolsa.jpg",
+    "category": "hogar",
+    "colors": [
+      "verde"
+    ],
+    "price": 20000
+  },
+  {
+    "id": 4,
+    "name": "Producto 2",
+    "description": "Prueba de Producto",
+    "image": "prueba",
+    "category": "cat",
+    "colors": [
+      "color"
+    ],
+    "price": 250
+  }
+]
