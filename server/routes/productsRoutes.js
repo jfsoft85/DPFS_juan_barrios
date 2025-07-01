@@ -2,25 +2,28 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/productsController');
 
+const upload = require('../middlewares/multerProducts');
+const validateProduct = require('../middlewares/validateProduct');
+
 // LISTADO de productos
 router.get('/', controller.index);
 
-// FORMULARIO de creación (¡debe ir antes del :id!)
-router.get('/create', controller.create);
-
-// FORMULARIO de edición (¡también antes!)
-router.get('/:id/edit', controller.edit);
-
-// DETALLE de un producto
+// DETALLE
 router.get('/:id', controller.detail);
 
-// ACCIÓN de creación (POST)
-router.post('/', controller.store);
+// FORMULARIO de creación
+router.get('/create', controller.create);
 
-// ACCIÓN de actualización (PUT)
-router.put('/:id', controller.update);
+// ACCIÓN de creación
+router.post('/', upload.single('image'), validateProduct, controller.store);
 
-// ACCIÓN de eliminación (DELETE)
+// FORMULARIO de edición
+router.get('/:id/edit', controller.edit);
+
+// ACCIÓN de edición
+router.put('/:id', upload.single('image'), validateProduct, controller.update);
+
+// ACCIÓN de eliminación
 router.delete('/:id', controller.destroy);
 
 module.exports = router;
